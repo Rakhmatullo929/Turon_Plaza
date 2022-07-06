@@ -1,0 +1,61 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'bulma.min.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<header>
+    <section class="navbar is-justify-content-center bejeviy" style="font-family: 'Josefin Sans', sans-serif;">
+        <menu class="menu pt-4">
+            <a href="{% url 'hotel:home_hotel' %}" class="mx-5 has-text-black">Home</a>
+            <a href="" class="mx-5 has-text-black">Rooms</a>
+            <a href="{% url 'hotel:about_hotel' %}" class="mx-5 has-text-black">About</a>
+            <a href="{% url 'hotel:contact_us_hotel' %}" class="mx-5 has-text-black">Contact Us</a>
+            <a class="btn_booking">Booking</a>
+        </menu>
+    </section>
+</header>
+
+{% block content %}
+{% endblock %}
+
+<footer class="section bejeviy" style="font-family: 'Josefin Sans', sans-serif;">
+    <div class="container has-text-centered">
+        <div class="columns is-centered ">
+            <div class="column has-text-left ">
+                <h1 class="title has-text-black">Hotel Turon Plaza</h1>
+            </div>
+            <div class="column">
+                <a href="{% url 'hotel:home_hotel' %}" class="has-text-black mx-3">Home</a>
+                <a href="" class="has-text-black mx-3">Rooms</a>
+                <a href="{% url 'hotel:about_hotel' %}" class="has-text-black " mx-3">About</a>
+                <a href="{% url 'hotel:contact_us_hotel' %}" class="has-text-black mx-3">Contact Us</a>
+            </div>
+            <div class="column">
+                <a href="">
+                    <img src="{% static 'uploads/Facebook.svg' %}" alt="">
+                </a>
+                <a href="">
+                    <img src="{% static 'uploads/Instagram.svg' %}" alt="">
+                </a>
+                <a href="">
+                    <img src="{% static 'uploads/Twitter.svg' %}" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'main_page.html' %}
+
+{% load static%}
+{% block main %}
+    <section class="section sect  is-medium">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <a href="{% url 'hotel:home_hotel' %}">
+                        <div class="box has-background-black box1">
+                            <h1 class="title has-text-centered has-text-white">Hotel Turon Plaza </h1>
+                            <p class="title has-text-centered is-1 has-text-warning-dark">***</p>
+                            <img src="{% static 'uploads/IMG_3542.JPG' %}" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="">
+                        <div class="box has-background-black box1">
+                            <h1 class="title has-text-centered has-text-white">Hotel Turon City Plaza</h1>
+                            <p class="title has-text-centered is-1 has-text-warning-dark">****</p>
+                            <img src="" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
