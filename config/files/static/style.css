@@ -56,12 +56,34 @@ header.sticky {
 
 .banner .content {
     position: relative;
-    text-align: left;
+    text-align: center;
     padding-bottom: 4rem;
 }
 
 .babay_img {
     width: 300px;
+}
+
+
+.conentt {
+    position: relative;
+}
+
+.contents {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #3475ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*#gradient {*/
@@ -73,7 +95,8 @@ header.sticky {
 
 
 .sect {
-    background: linear-gradient(#ecde95, #939191);
+    background: linear-gradient(to right, #ecde95, #554d57, #433d44, #000000);
+    /*background: linear-gradient(to left, #333, #333 50%, #ecde95 75%, #333 75%);*/
     justify-content: center;
     align-items: center;
 }
@@ -100,3 +123,96 @@ header.sticky {
     transform: scale(1.1);
 }
 
+.img_room1 {
+    width: 1000px;
+    height: 600px;
+}
+
+.notif {
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    left: 850px;
+    top: 140px;
+    background-color: #252323;
+    color: white;
+}
+
+.text_pad {
+    padding-top: 5rem;
+}
+
+
+.img_room_model {
+    width: 300px;
+}
+
+
+.room_hover {
+    transition: .5s;
+}
+
+.room_hover:hover {
+    transform: translateY(-3%);
+    transition: .5s;
+}
+
+
+.form {
+    padding: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.form label {
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.form input {
+    width: 100%;
+    height: 45px;
+    margin: 10px auto;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+.form textarea {
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+
+.text_purple {
+    color: #9B51E0 !important;
+}
+
+.space {
+    padding: 1rem 2rem;
+}
+
+
+header.stick {
+    background: #fff;
+    padding: 0.7rem 0.7rem;
+}
+
+
+.container-slide {
+    max-width: 100% !important;
+    height: 50vh;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 10px;
+
+}
+
+.slider-img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}

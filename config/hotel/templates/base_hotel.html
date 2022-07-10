@@ -20,10 +20,10 @@
     <section class="navbar is-justify-content-center bejeviy" style="font-family: 'Josefin Sans', sans-serif;">
         <menu class="menu py-2">
             <a href="{% url 'hotel:home_hotel' %}" class="mx-5 has-text-black">Home</a>
-            <a href="" class="mx-5 has-text-black">Rooms</a>
+            <a href="{% url 'hotel:rooms_hotel' %}" class="mx-5 has-text-black">Rooms</a>
             <a href="{% url 'hotel:about_hotel' %}" class="mx-5 has-text-black">About</a>
             <a href="{% url 'hotel:contact_us_hotel' %}" class="mx-5 has-text-black">Contact Us</a>
-            <a class="btn_booking">Booking</a>
+            <a class="btn_booking">Booking now</a>
         </menu>
     </section>
 </header>
@@ -39,7 +39,7 @@
             </div>
             <div class="column">
                 <a href="{% url 'hotel:home_hotel' %}" class="has-text-black mx-3">Home</a>
-                <a href="" class="has-text-black mx-3">Rooms</a>
+                <a href="{% url 'hotel:rooms_hotel' %}" class="has-text-black mx-3">Rooms</a>
                 <a href="{% url 'hotel:about_hotel' %}" class="has-text-black mx-3">About</a>
                 <a href="{% url 'hotel:contact_us_hotel' %}" class="has-text-black mx-3">Contact Us</a>
             </div>

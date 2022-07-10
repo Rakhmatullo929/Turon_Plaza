@@ -2,8 +2,9 @@
 {% load static %}
 
 {% block content %}
-    <section class="section">
+    <section class="section is-medium">
         <div class="container">
+            <h1 class="title has-text-centered has-text-black">Contact Us</h1>
             <div class="mapouter">
                 <div class="gmap_canvas">
                     <iframe width="1345" height="490" id="gmap_canvas"
@@ -30,24 +31,69 @@
     </section>
 
     <section class="section" style="font-family: 'Josefin Sans', sans-serif;">
-        <div class="container" >
+        <div class="container">
             <div class="columns">
                 <div class="column">
-                    <h1 class="title is-1">Feel free to <br> contact with us <br> any time </h1><br><br>
+
+                    <h1 class="title is-1">Feel free to <br>
+                        <span class="has-text-danger">contact</span>
+                        with us <br> any time
+                    </h1><br><br>
+
                     <div class="columns">
                         <div class="column is-2">
-                            <img class="has-text-weight-bold " src="{% static 'uploads/locaion.svg'%}" alt=""><br>
-                            <img src="{% static 'uploads/callb.svg'%}" alt=""><br>
-                            <img src="{% static 'uploads/pochta.svg'%}" alt="">
+                            <img class="has-text-weight-bold " src="{% static 'uploads/locaion.svg' %}" alt=""><br>
+                            <img src="{% static 'uploads/callb.svg' %}" alt=""><br>
+                            <img src="{% static 'uploads/pochta.svg' %}" alt="">
                         </div>
                         <div class="column is-4">
-                            <p class="subtitle pt-5 has-text-weight-bold">Hotel Turon Plaza</p><br>
-                            <p class="subtitle has-text-weight-bold pt-4">+998904912521</p><br>
-                            <p class="subtitle has-text-weight-bold pt-5">turon@gmail.com</p>
+                            <p class="subtitle pt-5 has-text-weight-bold">Hotel
+                                <span class="has-text-danger">Turon</span>
+                                Plaza
+                            </p><br>
+                            <p class="subtitle has-text-weight-bold pt-4">
+                                <span class="has-text-danger">+998</span>904912521
+                                <span class="has-text-danger">+998</span>901234567
+                            </p><br>
+                            <p class="subtitle has-text-weight-bold pt-5">turon<span class="has-text-danger">@</span>gmail.com
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="column">
+
+
+                    <form method="post" class="form">
+                        {% csrf_token %}
+                        <label for="">
+                            First Name
+                            {{ form.first_name }}
+                        </label>
+                        <label for="">
+                            Last Name
+                            {{ form.last_name }}
+                        </label>
+                        <label for="">
+                            Number
+                            {{ form.number }}
+                        </label>
+                        <label for="">
+                            E-mail
+                            {{ form.email }}
+                        </label>
+                        <label for="">
+                            Message
+                            {{ form.message }}
+                        </label>
+                        <button type="submit" class="button has-background-warning has-text-black is-fullwidth">
+                            Отправить
+                        </button>
+                        {% if is_success %}
+                            <div class="notification has-background-primary has-text-white">
+                                Your application has been successfully accepted.
+                            </div>
+                        {% endif %}
+                    </form>
                 </div>
             </div>
         </div>

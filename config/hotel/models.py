@@ -34,3 +34,15 @@ class Type(BaseModel):
 
     def __str__(self):
         return self.title
+
+
+class Feedback(BaseModel):
+    first_name = models.CharField(max_length=255, null=True)
+    last_name = models.CharField(max_length=255, null=True)
+    number = models.IntegerField()
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name} {self.number}'
+

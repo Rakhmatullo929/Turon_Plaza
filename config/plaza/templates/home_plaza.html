@@ -1,0 +1,61 @@
+{% extends 'base_plaza.html' %}
+{% load static %}
+
+{% block plaza %}
+    <div class="banner is-justify-content-center" style="font-family: 'Josefin Sans', sans-serif;">
+        <img src="{% static 'uploads/IMG_5288.JPG' %}" alt="">
+        <div class="conentt has-text-centered">
+            <h1 class="title is-1 has-text-danger">
+                A Memorable Experience
+            </h1>
+            <br>
+            <a href="" class="button">Booking</a>
+        </div>
+    </div>
+    <section class="section is-medium">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column ml-4">
+                    <h1 class="title is-2">About Hotel <span class="text_purple">Turon-City</span> Plaza</h1>
+                    <p class="subtitle is-5 mt-3 ">
+                        Ladies and gentlemen, history keeps repeating itself but doesn't <br>
+                        teach us any lessons. 'Never again' has turned into 'again and again <br> and again.' So today,
+                        ladies and gentlemen, take Hotel Lunar as a <br> wake-up call and a message to be our messenger
+                        that <br>
+                        people are the ones who can change what they want to change.
+                    </p>
+                </div>
+                <div class="column">
+                    <figure class="image ">
+                        <img src="{% static 'uploads/IMG_5266.JPG' %}" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="banner is-justify-content-center" style="font-family: 'Josefin Sans', sans-serif;">
+        <img src="{% static 'uploads/IMG_5295.JPG' %}" alt="">
+        <div class="contents">
+            <h1 class="title has-text-centered is-1 has-text-danger"> Events & Weddings</h1><br>
+            <p class="subtitle has-text-white is-4"> Ladies and gentlemen, history keeps repeating itself but doesn't
+                teach us any lessons. <br> 'Never again' has turned into 'again and again and again.' So today,
+                ladies <br> and gentlemen, take Hotel Lunar as a wake-up call and a message <br> to be our messenger
+                that
+                people are the ones who can <br> change what they want to change.
+            </p>
+        </div>
+    </div>
+    <section class="section is-medium">
+        {% block slider %}
+            <div class="container-slide ml-6 mb-6">
+                <div id="carousel-demo" class="carousel">
+                    {% for slide in slides %}
+                        <div class="item-1">
+                            <img class="slider-img" src="{{ slide.image.url }}" alt="">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endblock %}
+    </section>
+{% endblock %}

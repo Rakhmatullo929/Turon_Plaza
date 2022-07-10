@@ -5,3 +5,4 @@ from hotel.models import *
 
 admin.site.register(Room),
 admin.site.register(Type),
+admin.site.register(Feedback),

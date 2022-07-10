@@ -2,5 +2,36 @@
 {% load static %}
 
 {% block content %}
+    <section class="section is-medium">
+        <div class="container">
+            <img src="{% static 'uploads/IMG_5280.JPG' %}" alt="" class="img_room1">
+            <div class="is-dark title has-text-centered notif">
+                <h1 class="title has-text-white is-size-1 text_pad">
+                    We have amaizing <br> rooms browser <br> your favorite
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section" style="font-family: 'Josefin Sans', sans-serif">
+        <div class="columns">
+            {% for item in room %}
+                <div class="column is-multiline">
+                    <div class="box room_hover">
+                        <img src="{{ item.image.url }}" alt="" class="img_room_model">
+                        <h1 class="title has-text-danger">{{ item.type }}</h1>
+                        <p class="subtitle">{{ item.description }}</p>
+                        <p class="subtitle has-text-danger">
+                            Booking now -->
+                            <a href="tel:+998905113305" class="has-text-black">+998905113305</a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
 
+    </section>
+    {#    <p class="cifra">Choose The Best Place For Your Vacation</p>#}
+    {#    <h1 class="pod123"> We have prepared several hotels, villas and apartments <br> to enjoy your vacation with your#}
+    {#        family.#}
+    {#    </h1>#}
 {% endblock %}
