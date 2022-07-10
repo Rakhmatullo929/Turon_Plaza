@@ -12,3 +12,11 @@ def home_plaza(request):
 
 def room_plaza(request):
     return render(request, 'rooms_plaza.html')
+
+
+def facilities_plaza(request):
+    return render(request, 'facilities_plaza.html')
+
+
+def contact_us_plaza(request):
+    return render(request, 'contact_us_plaza.html')

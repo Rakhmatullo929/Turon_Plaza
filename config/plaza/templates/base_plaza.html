@@ -26,8 +26,8 @@
         <menu class="menu py-2">
             <a href="{% url 'plaza:home_plaza' %}" class="mx-5 has-text-black">Home</a>
             <a href="{% url 'plaza:room_plaza' %}" class="mx-5 has-text-black">Rooms&Suites</a>
-            <a href="" class="mx-5 has-text-black">About</a>
-            <a href="" class="mx-5 has-text-black">Contact Us</a>
+            <a href="{% url 'plaza:facilities_plaza' %}" class="mx-5 has-text-black">Facilities</a>
+            <a href="{% url 'plaza:contact_us_plaza' %}" class="mx-5 has-text-black">Contact Us</a>
             <a href="" class="mx-5 mr-6 has-text-black">Events</a>
         </menu>
     </section>
@@ -46,10 +46,11 @@
                 </h1>
             </div>
             <div class="column is-6">
-                <a href="" class="mx-5 has-text-white">Home</a>
-                <a href="" class="mx-5 has-text-white">Rooms&Suites</a>
-                <a href="" class="mx-5 has-text-white">About</a>
-                <a href="" class="mx-5 has-text-white">Contact Us</a>
+                <a href="{% url 'plaza:home_plaza' %}" class="mx-5 has-text-white">Home</a>
+                <a href="{% url 'plaza:room_plaza' %}" class="mx-5 has-text-white">Rooms&Suites</a>
+                <a href="{% url 'plaza:facilities_plaza' %}" class="mx-5 has-text-white">Facilities</a>
+                <a href="{% url 'plaza:contact_us_plaza' %}" class="mx-5 has-text-white">Contact Us</a>
+                <a href="" class="mx-5 has-text-white">Events</a>
             </div>
             <div class="column is-5">
                 <a href="">

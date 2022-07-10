@@ -20,3 +20,22 @@ class BaseModel(models.Model):
 
 class Slide(BaseModel):
     image = models.ImageField(default='slide.jpg')
+
+#
+# class RoomPlaza(BaseModel):
+#     image = models.ImageField()
+#     type = models.ForeignKey('Type', related_name='Type', on_delete=models.CASCADE)
+#     bathroom = models.CharField(null=True, max_length=50)
+#     bedroom = models.CharField(null=True, max_length=50)
+#     people = models.CharField(null=True, max_length=50)
+#     price = models.IntegerField()
+#
+#     def __str__(self):
+#         return f'{self.type}{self.people}'
+
+#
+# class Type(BaseModel):
+#     title = models.CharField(max_length=255)
+#
+#     def __str__(self):
+#         return self.title
